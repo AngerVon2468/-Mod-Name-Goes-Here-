@@ -19,6 +19,8 @@ repositories {
 	maven { url = "https://maven.shedaniel.me/" }
 	maven { url = "https://maven.terraformersmc.com/releases/" }
 	maven { url = "https://maven.ladysnake.org/releases" }
+	maven { url = "https://api.modrinth.com/maven" }
+
 }
 
 fabricApi {
@@ -46,7 +48,9 @@ dependencies {
 
 	// Trinkets
 	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
-	
+
+	// Midnight Lib
+	modImplementation "maven.modrinth:midnightlib:${project.midnightlib_version}"
 }
 
 processResources {
