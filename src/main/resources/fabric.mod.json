@@ -3,13 +3,13 @@
 	"id": "mod_name_goes_here",
 	"version": "${version}",
 	"name": "<Mod-Name-Goes-Here>",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "<Mod-Name-Goes-Here> is my personal mod for doing... whatever the heck I want... :)",
 	"authors": [
-		"Me!"
+		"Mavity The Madity"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/AngerVon2468/-Mod-Name-Goes-Here-",
+		"sources": "https://github.com/AngerVon2468/-Mod-Name-Goes-Here-"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/mod_name_goes_here/icon.png",
@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"net.mavity.mod_name_goes_here.ModNameGoesHere"
+		],
+		"client": [
+			"net.mavity.mod_name_goes_here.ModNameGoesHereClient"
 		],
 		"fabric-datagen": [
 			"net.mavity.mod_name_goes_here.ModNameGoesHereDataGenerator"
@@ -26,12 +29,22 @@
 		"mod_name_goes_here.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.10",
+		"fabricloader": ">=0.15.7",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"trinkets": ">=3.7.1",
+		"cloth-config": ">=11.0.99"
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": false,
+			"links": {
+				"modmenu.discord": "https://discord.gg/UkuASUwJpC"
+			}
+		}
 	}
 }

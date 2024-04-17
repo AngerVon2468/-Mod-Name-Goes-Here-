@@ -1,22 +1,36 @@
 package net.mavity.mod_name_goes_here;
 
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.ConfigHolder;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 
+import net.mavity.mod_name_goes_here.configregister.ConfigInit;
+import net.mavity.mod_name_goes_here.itemregister.ItemInit;
+import net.mavity.mod_name_goes_here.propertyregister.PropertyInit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ModNameGoesHere implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("mod_name_goes_here");
+	public static final String MOD_ID = "mod_name_goes_here";
+
+	public static final String NAME = "<Mod Name Goes Here>";
+    public static final Logger LOGGER = LoggerFactory.getLogger(ModNameGoesHere.NAME);
+
+	//CONFIG
+	public static final ConfigHolder<ConfigInit> CONFIG = AutoConfig.register(
+			ConfigInit.class, Toml4jConfigSerializer::new);
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		//LOGGER & INITIALIZING CLASSES
+		ModNameGoesHere.LOGGER.info(ModNameGoesHere.NAME + " has registered its' main class.");
+		ItemInit.registerMNGHItems();
+		PropertyInit.registerMNGHProperties();
+
+		//CONFIG
+		AutoConfig.getConfigHolder(ConfigInit.class).getConfig();
+		CONFIG.load();
 	}
 }
