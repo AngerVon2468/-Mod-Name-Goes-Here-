@@ -13,7 +13,8 @@ public class ModNameGoesHereClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ModNameGoesHereClient.LOGGER.info(ModNameGoesHereClient.NAME + " has registered its' client class");
-        //TRINKET RENDER
+
+        // Trinket Renderer
         TrinketRendererRegistry.registerRenderer(ItemInit.MAJORAS_MASK, (TrinketRenderer) ItemInit.MAJORAS_MASK);
     }
 }

@@ -7,7 +7,7 @@ import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 
 import net.mavity.mod_name_goes_here.configregister.ConfigInit;
-import net.mavity.mod_name_goes_here.configregister.MidnightConfigExample;
+import net.mavity.mod_name_goes_here.configregister.ModNameGoesHereConfigMidnightLib;
 import net.mavity.mod_name_goes_here.itemregister.ItemInit;
 import net.mavity.mod_name_goes_here.propertyregister.PropertyInit;
 import org.slf4j.Logger;
@@ -34,8 +34,8 @@ public class ModNameGoesHere implements ModInitializer {
 		//CONFIG
 		AutoConfig.getConfigHolder(ConfigInit.class).getConfig();
 		CONFIG.load();
-		//mlc
-		MidnightConfig.init(ModNameGoesHere.MOD_ID, MidnightConfigExample.class);
 
+		// MidnightLib Config (based)
+		MidnightConfig.init(ModNameGoesHere.MOD_ID, ModNameGoesHereConfigMidnightLib.class);
 	}
 }

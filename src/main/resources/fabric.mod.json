@@ -34,7 +34,9 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"trinkets": ">=3.7.1",
-		"cloth-config": ">=11.0.99"
+		"cloth-config": ">=11.0.99",
+		"midnightlib": ">=1.4.1",
+		"modmenu": "7.0.1"
 	},
 	"suggests": {
 		"another-mod": "*"

@@ -6,6 +6,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 public class ModNameGoesHereDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-
+		// Ew datagen
 	}
 }

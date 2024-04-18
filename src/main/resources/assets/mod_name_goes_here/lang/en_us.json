@@ -1,0 +1,20 @@
+{
+  "mod_name_goes_here.midnightconfig.wiiu": "WiiU",
+  "mod_name_goes_here.midnightconfig.enum.WiiU.Fast": "Fast",
+  "mod_name_goes_here.midnightconfig.enum.WiiU.Fancy": "Fancy",
+  "mod_name_goes_here.midnightconfig.enum.WiiU.Fabulous": "Fabulous!",
+  "mod_name_goes_here.midnightconfig.enum.WiiU.Overkill": "Complete Overkill",
+
+  "comments": "Below",
+  "mod_name_goes_here.midnightconfig.comment_1": "<Mod-Name-Goes-Here>",
+
+  "categories": "Below",
+  "mod_name_goes_here.midnightconfig.category.settings": "<MNGH> Settings",
+  "mod_name_goes_here.midnightconfig.category.examples": "Stuff only I need to see",
+
+  "strings": "Below",
+  "mod_name_goes_here.midnightconfig.name": "Name",
+
+  "booleans": "Below",
+  "mod_name_goes_here.midnightconfig.showInfo": "Name"
+}
