@@ -31,21 +31,22 @@ public class MMTrinket extends TrinketItem implements TrinketRenderer {
     public MMTrinket(Settings settings) {
         super(settings);
     }
-    /*public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
+    public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
         var modifiers = super.getModifiers(stack, slot, entity, uuid);
-        modifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(uuid, "superslegend:attack_damage", 0.0, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        modifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(uuid, "mod_name_goes_here:attack_modifier", 2.0, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         return modifiers;
-    }*/
+    }
 
     @Override
     public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {
         if(!entity.hasStatusEffect(StatusEffects.WITHER)) {
             ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 20 * 10, 0));
         }
-        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20 * 5, 1));
-        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 5, 1));
+        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 5, 2));
         ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20 * 5, 1));
         ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BAD_OMEN, 20 * 5, 0));
+        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 20 * 5, 2));
+        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 20 * 5, 2));
     }
 
     @Environment(EnvType.CLIENT)
