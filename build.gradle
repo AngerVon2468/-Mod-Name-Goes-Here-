@@ -21,6 +21,13 @@ repositories {
 	maven { url = "https://maven.ladysnake.org/releases" }
 	maven { url = "https://api.modrinth.com/maven" }
 
+	maven { url = "https://mvn.devos.one/snapshots/" } // Create, Porting Lib, Forge Tags, Milk Lib, Registrate
+	maven { url = "https://mvn.devos.one/releases/" } // Porting Lib Releases
+	maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // Forge Config API Port
+	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
+	maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
+	maven { url = "https://maven.tterrag.com/" } // Flywheel
+
 }
 
 fabricApi {
@@ -51,6 +58,15 @@ dependencies {
 
 	// Midnight Lib
 	modImplementation "maven.modrinth:midnightlib:${project.midnightlib_version}"
+
+	// Create - dependencies are added transitively
+	modImplementation("com.simibubi.create:create-fabric-${project.minecraft_version}:${project.create_version}")
+
+	// Ranged Weapon API
+	modImplementation "maven.modrinth:ranged-weapon-api:${project.ranged_weapon_api_version}"
+
+	// Fabric Shield Lib
+	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v${project.fabric_shield_lib_version}"
 }
 
 processResources {

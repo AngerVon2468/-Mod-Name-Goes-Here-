@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 
 public class ModNameGoesHere implements ModInitializer {
 	public static final String MOD_ID = "mod_name_goes_here";
-
 	public static final String NAME = "<Mod Name Goes Here>";
     public static final Logger LOGGER = LoggerFactory.getLogger(ModNameGoesHere.NAME);
 
