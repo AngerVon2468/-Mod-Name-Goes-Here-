@@ -67,6 +67,9 @@ dependencies {
 
 	// Fabric Shield Lib
 	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v${project.fabric_shield_lib_version}"
+
+	// Fabric ASM
+	modImplementation "com.github.Chocohead:Fabric-ASM:v${project.fabricasm_version}"
 }
 
 processResources {

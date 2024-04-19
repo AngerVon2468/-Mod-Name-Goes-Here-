@@ -36,7 +36,10 @@
 		"trinkets": ">=3.7.1",
 		"cloth-config": ">=11.0.99",
 		"midnightlib": ">=1.4.1",
-		"modmenu": "7.0.1"
+		"modmenu": "7.0.1",
+		"create": "0.5.1-f-build.1335+mc1.20.1",
+		"ranged_weapon_api": "1.1.1+1.20.1",
+		"fabricshieldlib": "1.7.2-1.20.1"
 	},
 	"suggests": {
 		"another-mod": "*"
