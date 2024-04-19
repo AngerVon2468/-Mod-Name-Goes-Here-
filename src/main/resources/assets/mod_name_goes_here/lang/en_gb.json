@@ -1,11 +1,11 @@
 {
   "item.mod_name_goes_here.majoras_mask": "Majora's Mask",
 
-  "mod_name_goes_here.midnightconfig.wiiu": "WiiU",
-  "mod_name_goes_here.midnightconfig.enum.WiiU.Fast": "Fast",
-  "mod_name_goes_here.midnightconfig.enum.WiiU.Fancy": "Fancy",
-  "mod_name_goes_here.midnightconfig.enum.WiiU.Fabulous": "Fabulous!",
-  "mod_name_goes_here.midnightconfig.enum.WiiU.Overkill": "Complete Overkill",
+  "mod_name_goes_here.midnightconfig.style": "Style",
+  "mod_name_goes_here.midnightconfig.enum.Style.Ew": "Ew",
+  "mod_name_goes_here.midnightconfig.enum.Style.Fancy": "Fancy",
+  "mod_name_goes_here.midnightconfig.enum.Style.Fabulous": "Fabulous!",
+  "mod_name_goes_here.midnightconfig.enum.Style.Posh": "Posho",
 
   "comments": "Below",
   "mod_name_goes_here.midnightconfig.comment_1": "<Mod-Name-Goes-Here>",
@@ -18,5 +18,8 @@
   "mod_name_goes_here.midnightconfig.name": "Name",
 
   "booleans": "Below",
-  "mod_name_goes_here.midnightconfig.showInfo": "Name"
+  "mod_name_goes_here.midnightconfig.showInfo": "Show Item Tooltips",
+
+  "tooltips": "Below",
+  "tooltip.mod_name_goes_here.mm_trinket": "Darkness radiates from this object..."
 }

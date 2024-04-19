@@ -8,9 +8,9 @@ public class ModNameGoesHereConfigMidnightLib extends MidnightConfig {
     @Comment(category = "settings", centered = true) public static Comment comment_1; // Comments are rendered like an option without a button and are excluded from the config file
     @Entry(category = "settings") public static boolean showInfo = true; // Example for a boolean option
     @Entry(category = "settings") public static String name = "WiiU";
-    @Entry(category = "settings") public static WiiU wiiu = WiiU.Fancy;
-    public enum WiiU {
-        Fast, Fancy, Fabulous, Overkill
+    @Entry(category = "settings") public static Style style = Style.Fancy;
+    public enum Style {
+        Ew, Fancy, Fabulous, Posh
     }
     @Entry(category = "examples") public static int fabric = 16777215; // Example for an int option
     @Entry(category = "examples") public static double world = 1.4D; // Example for a double option

@@ -7,7 +7,9 @@ import dev.emi.trinkets.api.client.TrinketRenderer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.mavity.mod_name_goes_here.ModNameGoesHere;
+import net.mavity.mod_name_goes_here.configregister.ModNameGoesHereConfigMidnightLib;
 import net.mavity.mod_name_goes_here.modelregister.MMModel;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -21,8 +23,12 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.UUID;
 
 public class MMTrinket extends TrinketItem implements TrinketRenderer {
@@ -43,8 +49,8 @@ public class MMTrinket extends TrinketItem implements TrinketRenderer {
             ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 20 * 10, 0));
         }
         ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 5, 2));
-        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20 * 5, 1));
-        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BAD_OMEN, 20 * 5, 0));
+        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20 * 5, 2));
+        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BAD_OMEN, 20 * 5, 2));
         ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 20 * 5, 2));
         ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 20 * 5, 2));
     }
@@ -67,5 +73,11 @@ public class MMTrinket extends TrinketItem implements TrinketRenderer {
         }
 
         return this.model;
+    }
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext options) {
+        if (ModNameGoesHereConfigMidnightLib.showInfo == true) {
+            tooltip.add(Text.translatable("tooltip.mod_name_goes_here.mm_trinket"));
+            super.appendTooltip(stack, world, tooltip, options);
+        }
     }
 }
