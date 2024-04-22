@@ -1,14 +1,18 @@
 package net.mavity.mod_name_goes_here.itemregister.itemtypes.trinkets;
 
 import com.google.common.collect.Multimap;
+
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketItem;
 import dev.emi.trinkets.api.client.TrinketRenderer;
+
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+
 import net.mavity.mod_name_goes_here.ModNameGoesHere;
 import net.mavity.mod_name_goes_here.configregister.ModNameGoesHereConfigMidnightLib;
 import net.mavity.mod_name_goes_here.modelregister.MMModel;
+
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumer;
@@ -26,6 +30,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
+
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;

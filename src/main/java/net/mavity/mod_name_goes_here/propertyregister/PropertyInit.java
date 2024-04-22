@@ -1,6 +1,7 @@
 package net.mavity.mod_name_goes_here.propertyregister;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+
 import net.mavity.mod_name_goes_here.ModNameGoesHere;
 
 public class PropertyInit {

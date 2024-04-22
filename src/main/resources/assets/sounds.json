@@ -1,0 +1,7 @@
+{
+  "mavitys_random_1": {
+    "category": "player",
+    "subtitle": "mod_name_goes_here.subtitle.mavitys_random_1",
+    "sounds": [ "mod_name_goes_here:mavitys_random_1" ]
+  }
+}

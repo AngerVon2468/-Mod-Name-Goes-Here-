@@ -1,5 +1,7 @@
 package net.mavity.mod_name_goes_here.configregister;
+
 import com.google.common.collect.Lists;
+
 import eu.midnightdust.lib.config.MidnightConfig;
 
 import java.util.List;

@@ -3,6 +3,7 @@ package net.mavity.mod_name_goes_here.itemregister;
 import net.mavity.mod_name_goes_here.ModNameGoesHere;
 import net.mavity.mod_name_goes_here.itemregister.itemtypes.trinkets.MMTrinket;
 import net.mavity.mod_name_goes_here.propertyregister.PropertyInit;
+
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

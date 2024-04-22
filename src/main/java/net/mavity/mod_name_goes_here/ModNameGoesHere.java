@@ -1,15 +1,19 @@
 package net.mavity.mod_name_goes_here;
 
 import eu.midnightdust.lib.config.MidnightConfig;
+
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
+
 import net.fabricmc.api.ModInitializer;
 
 import net.mavity.mod_name_goes_here.configregister.ConfigInit;
 import net.mavity.mod_name_goes_here.configregister.ModNameGoesHereConfigMidnightLib;
 import net.mavity.mod_name_goes_here.itemregister.ItemInit;
 import net.mavity.mod_name_goes_here.propertyregister.PropertyInit;
+import net.mavity.mod_name_goes_here.soundregister.SoundInit;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,12 +29,13 @@ public class ModNameGoesHere implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		//LOGGER & INITIALIZING CLASSES
+		// Logger & initializing class
 		ModNameGoesHere.LOGGER.info(ModNameGoesHere.NAME + " has registered its' main class.");
 		ItemInit.registerMNGHItems();
+		SoundInit.registerMNGHSounds();
 		PropertyInit.registerMNGHProperties();
 
-		//CONFIG
+		// Config
 		AutoConfig.getConfigHolder(ConfigInit.class).getConfig();
 		CONFIG.load();
 
