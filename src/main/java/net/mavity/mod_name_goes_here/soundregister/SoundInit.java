@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 
 public class SoundInit {
 
-    public static final SoundEvent MAVITYS_RANDOM_ONE = register("mavitys_random_1");
+    public static final SoundEvent MAVITYS_RANDOM_ONE = register("mavitys_random_one");
 
     static SoundEvent register(String id) {
         SoundEvent sound = SoundEvent.of(new Identifier(ModNameGoesHere.MOD_ID, id));
